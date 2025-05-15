@@ -12,8 +12,8 @@
 #include <stdlib.h>
 
 
-#define spd_matrix_file "A_matrix.txt"
-#define b_vector_file "b_vector.txt"
+#define spd_matrix_file "./example_input/example_m.txt"
+#define b_vector_file "./example_input/example_v.txt"
 
 // Loads a matrix of size n x n from a text file
 double* load_matrix(int n) {
