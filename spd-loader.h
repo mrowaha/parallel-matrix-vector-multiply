@@ -10,14 +10,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
-
-#define spd_matrix_file "./example_input/example_m.txt"
-#define b_vector_file "./example_input/example_v.txt"
+#include "config.h"
 
 // Loads a matrix of size n x n from a text file
 double* load_matrix(int n) {
-    FILE *file = fopen(spd_matrix_file, "r");
+    FILE *file = fopen(matrix_file, "r");
     if (!file) {
         perror("Error opening matrix file");
         exit(EXIT_FAILURE);
@@ -42,7 +39,7 @@ double* load_matrix(int n) {
 
 // Loads a vector of size n from a text file
 double* load_vector(int n) {
-    FILE *file = fopen(b_vector_file, "r");
+    FILE *file = fopen(vector_file, "r");
     if (!file) {
         perror("Error opening vector file");
         exit(EXIT_FAILURE);
